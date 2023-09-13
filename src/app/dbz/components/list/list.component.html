@@ -1,0 +1,23 @@
+<h4>Listado de personajes</h4>
+
+<ul class="list-group">
+  <li
+  *ngFor="
+  let character of characters
+  let i = index
+  let isEven = even"
+  class="list-group-item d-flex justify-content-between align-items-center"
+  [ngClass]="{'list-group-item-dark': isEven}">
+  <div>
+    <span class="text-primary">{{ i + 1 }}.</span>
+
+    {{ character.name }} -
+
+    <span class="fw-bold">Poder: </span>
+
+    {{ character.power }}
+  </div>
+
+  <button class="btn btn-danger" (click)="onDeleteCharacter(character.id)">X</button>
+  </li>
+</ul>
