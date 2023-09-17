@@ -29,7 +29,7 @@ export class DbzService {
 
     const newCharacter:Character = {id: uuidv4(), ...character};
 
-    this.characters = [...this.characters, character];
+    this.characters = [...this.characters, newCharacter];
   }
 
   deleteCharacterById( id:string ) {

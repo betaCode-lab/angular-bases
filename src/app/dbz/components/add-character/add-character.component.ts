@@ -18,7 +18,6 @@ export class AddCharacterComponent {
   }
 
   emitCharacter():void {
-    console.log(this.character);
 
     if( this.character.name.trim().length === 0 ) return;
 
